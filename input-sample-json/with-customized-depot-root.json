@@ -1,0 +1,14 @@
+{
+    "workspace-root": "//MyWorkspace",
+    "depot-root": "//root/projects",
+    "mappings": {
+        "includes": [
+            "foo/...",
+            "bar/*"
+        ],
+        "excludes": [
+            "foo/.../build/...",
+            "bar/*.cannot-open"
+        ]
+    }
+}

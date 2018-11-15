@@ -1,0 +1,4 @@
+"+//root/projects/foo/..." "/Volumes/source/p4source/root/projects/foo/..."
+"+//root/projects/bar/*" "/Volumes/source/p4source/root/projects/bar/*"
+"-//root/projects/foo/.../build/..." "/Volumes/source/p4source/root/projects/foo/.../build/..."
+"-//root/projects/bar/*.cannot-open" "/Volumes/source/p4source/root/projects/bar/*.cannot-open"
