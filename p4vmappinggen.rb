@@ -5,6 +5,10 @@ opt = OptionParser.new
 opt.on('-i', '--input JSON', 'input file') { |i|
     $json = i
 }
+special_workspace_root = nil
+opt.on('-w', '--workspace-root WORKSPACE_ROOT', 'set(override) workspace root') { |i|
+    special_workspace_root = i
+}
 opt.parse(ARGV)
 
 File.open($json) do |file|
@@ -15,7 +19,7 @@ File.open($json) do |file|
         exit false
     end
 
-    workspace_root = info['workspace-root'] || ''
+    workspace_root = special_workspace_root || (info['workspace-root'] || '')
     includes = info['mappings']['includes']  || ''
     excludes = info['mappings']['excludes']  || ''
 
