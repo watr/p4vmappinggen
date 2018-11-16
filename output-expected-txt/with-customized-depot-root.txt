@@ -1,4 +1,4 @@
-"+//root/projects/foo/..." "//MyWorkspace/foo/..."
-"+//root/projects/bar/*" "//MyWorkspace/bar/*"
+"//root/projects/foo/..." "//MyWorkspace/foo/..."
+"//root/projects/bar/*" "//MyWorkspace/bar/*"
 "-//root/projects/foo/.../build/..." "//MyWorkspace/foo/.../build/..."
 "-//root/projects/bar/*.cannot-open" "//MyWorkspace/bar/*.cannot-open"

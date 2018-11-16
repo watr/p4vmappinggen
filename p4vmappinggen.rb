@@ -19,7 +19,7 @@ File.open($json) do |file|
     includes = info['mappings']['includes']  || ''
     excludes = info['mappings']['excludes']  || ''
 
-    prefixes = includes.map { '+' } + excludes.map { '-' }
+    prefixes = includes.map { '' } + excludes.map { '-' }
     zipped = prefixes.zip(includes + excludes)
 
     joined = zipped.map { |item|
