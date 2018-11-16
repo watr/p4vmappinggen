@@ -12,16 +12,16 @@ $ ruby p4vmappinggen -i input.json > output.txt
 
 ```json
 {
-    "workspace-root": "/Volumes/source/p4source",
-    "depot-root": "//",
+    "workspace-root": "//MyWorkspace",
+    "depot-root": "//root/projects",
     "mappings": {
         "includes": [
-            "root/projects/foo/...",
-            "root/projects/bar/*"
+            "foo/...",
+            "bar/*"
         ],
         "excludes": [
-            "root/projects/foo/.../build/...",
-            "root/projects/bar/*.cannot-open"
+            "foo/.../build/...",
+            "bar/*.cannot-open"
         ]
     }
 }
