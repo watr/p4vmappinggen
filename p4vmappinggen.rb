@@ -13,7 +13,13 @@ special_workspace_root = nil
 opt.on('-w', '--workspace-root WORKSPACE_ROOT', 'set(override) workspace root') { |i|
     special_workspace_root = i
 }
+opt.on('-h', '--help', 'show this help') { puts opt; exit }
 opt.parse(ARGV)
+
+if $json.nil? then 
+    puts opt
+    exit
+end
 
 File.open($json) do |file|
     info = JSON.load(file)
