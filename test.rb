@@ -12,12 +12,16 @@ Find.find('./input-sample-json') { |item|
 
 has_ng = false
 files.each { |item|
-    stdout, stderr, status = Open3.capture3("diff -B <(ruby ./p4vmappinggen.rb -i ./input-sample-json/#{item}.json) <(cat ./output-expected-txt/#{item}.txt)")
+    script = "bash -c " + %Q["diff -B <(cat ./output-expected-txt/#{item}.txt) <(ruby ./p4vmappinggen.rb -i ./input-sample-json/#{item}.json)\"]
+    stdout, stderror, status = Open3.capture3(script)
     ok = (stdout.length == 0)
-    if (not has_ng) and (not ok) then
-        has_ng = true
-    end
     print ['test', item, '=>', (ok ? "OK" : "NG")].join(' ') + "\n"
+    if (not ok) then
+        print stdout
+        if (not has_ng) then
+            has_ng = true
+        end
+    end
 }
 
 exit (not has_ng)

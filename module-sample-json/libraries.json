@@ -1,0 +1,13 @@
+{
+    "depot-root": "//root/projects",
+    "mappings": {
+        "includes": [
+            "libraries/necessary/...",
+            "libraries/probably/files/*"
+        ],
+        "excludes": [
+            "libraries/useless/...",
+            "libraries/.../32bit/..."
+        ]
+    }
+}

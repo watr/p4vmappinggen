@@ -1,0 +1,8 @@
+"//root/projects/libraries/necessary/..." "//SomeWorkspace/libraries/necessary/..."
+"//root/projects/libraries/probably/files/*" "//SomeWorkspace/libraries/probably/files/*"
+"-//root/projects/libraries/useless/..." "//SomeWorkspace/libraries/useless/..."
+"-//root/projects/libraries/.../32bit/..." "//SomeWorkspace/libraries/.../32bit/..."
+"//root/projects/foo/..." "//SomeWorkspace/foo/..."
+"//root/projects/bar/*" "//SomeWorkspace/bar/*"
+"-//root/projects/foo/.../build/..." "//SomeWorkspace/foo/.../build/..."
+"-//root/projects/bar/*.cannot-open" "//SomeWorkspace/bar/*.cannot-open"
