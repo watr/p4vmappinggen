@@ -1,7 +1,10 @@
 {
-    "workspace-root": "//AnyWorkspace",
+    "workspace-root": "//SomeWorkspace",
     "depot-root": "//root/projects",
     "mappings": {
+        "modules": [
+            "../module-sample-json/libraries.json"
+        ],
         "includes": [
             "foo/...",
             "bar/*"
